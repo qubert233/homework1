@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+<script>
+    var x = parseInt(prompt("Введите число для переменной A"));
+    var y = parseInt(prompt("Введите число для переменной B"));
+    var z = parseInt(prompt("Введите число для переменной C"));
+    funCS(x,y,z);
+    function funCS(a, b, c)
+    {
+        var sum = 0;
+
+        if (a > 0) {
+            sum = sum + a;
+        }
+        if (b > 0) {
+            sum = sum + b;
+        }
+        if (c > 0) {
+            sum = sum + c;
+        }
+        document.write(sum);
+        document.write('<br>');;
+    }
+</script>
+<a href="../Conditional statements.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

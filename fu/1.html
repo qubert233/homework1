@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Введите число от 1 до 7");
+        dayOfTheWeek(x);
+        function dayOfTheWeek(dayNumber)
+        {
+
+            if (dayNumber < 1 || dayNumber > 7)
+            {
+                document.write("Задано неверное значение");
+                document.write('<br>');
+            }
+            return["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"][dayNumber-1];
+        }
+        document.write(dayOfTheWeek(x));
+        document.write('<br>');
+    </script>
+    <a href="../Functions.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

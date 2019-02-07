@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8</title>
+</head>
+<body>
+<script>
+    funAr();
+    function funAr() {
+
+        var mas = [];
+        var mas1 = [];
+        var mas2 = [];
+        var masRez = [];
+
+        var iterator = +prompt('Сколько элементов в массиве ?', '') - 1;
+
+        for (i = 0; i <= iterator; i++) {
+            var el = +prompt('Enter number: ', '');
+            mas[i] = el;
+        }
+
+        for (i=0; i<mas.length/2; i++){
+            mas1[i]=mas[i];
+        }
+
+        var masL = Math.floor(mas.length/2);
+
+        if(mas.length%2==0) {
+            for (i=masL, j=0; i<mas.length; i++, j++){
+
+                mas2[j]=mas[i];
+            }
+        }else {
+            for (i=masL+1, j=0; i<mas.length; i++, j++){
+
+                mas2[j]=mas[i];
+            }
+        }
+
+        masRez = [...mas2, ...mas1];
+
+        document.write('Замена местами половин массива -  ' + masRez + ' ==> ' + mas);
+    }
+    document.write('<br/>');
+</script>
+<a href="../Arrays.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

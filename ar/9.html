@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9</title>
+</head>
+<body>
+<script>
+    var arr1 = [5, 2, 12, 8, 23, 17];
+    document.write(arr1);
+    document.write("<br/>");
+    document.write("<br/>");
+    function bubbleSort(arr)
+    {
+        var n = arr.length;
+        for (var i = 0; i < n-1; i++)
+        { for (var j = 0; j < n-1-i; j++)
+        { if (arr[j+1] < arr[j])
+        { var t = arr[j+1]; arr[j+1] = arr[j]; arr[j] = t; }
+        }
+        }
+        return arr;
+    }
+    bubbleSort(arr1);
+    document.write(arr1+" - Это пузырьковая сортировка")
+    document.write("<br/>");
+    var arr2 = [5, 2, 12, 8, 23, 17];
+    document.write("<br/>");
+    function selectionSort(arr)
+    {
+        var n = arr.length;
+        for (var i = 0; i < n-1; i++)
+        { var min = i;
+            for (var j = i+1; j < n; j++)
+            { if (arr[j] < arr[min]) min = j; }
+            var t = arr[min]; arr[min] = arr[ i ]; arr[ i ] = t;
+        }
+        return arr;
+    }
+    selectionSort(arr2);
+    document.write(arr2+" - Это сортировка выбором");
+    document.write("<br/>");
+    var arr3 = [5, 2, 12, 8, 23, 17];
+    document.write("<br/>");
+    function insertionSort(arr)
+    {
+        var n = arr.length;
+        for (var i = 0; i < n; i++)
+        { var v = arr[ i ], j = i-1;
+            while (j >= 0 && arr[j] > v)
+            { arr[j+1] = arr[j]; j--; }
+            arr[j+1] = v;
+        }
+        return arr;
+    }
+    insertionSort(arr3);
+    document.write(arr3+" - Это сортировка вставками");
+    document.write("<br/>");
+</script>
+<a href="../Arrays.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

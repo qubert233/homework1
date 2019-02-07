@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<script>
+    findMax();
+    function findMax() {
+        let a = +prompt('Enter a:', '');
+        let b = +prompt('Enter b:', '');
+        let c = +prompt('Enter c:', '');
+        if (a*b*c >= a+b+c){
+            var rez = a*b*c + 3;
+            document.write("Максимальное значение было найдено в уравнении с умножением "+rez);
+        }
+        else {
+            var rez = (a+b+c) + 3;
+            document.write("Максимальное значение было найдено в уравнении со сложением "+rez);
+        }
+    }
+    document.write("<br/>");
+</script>
+<a href="../Conditional statements.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

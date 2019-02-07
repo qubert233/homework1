@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+<script>
+    SimplNum();
+    function SimplNum () {
+
+    var x = +prompt("Enter number: ");
+    if (x < 2) {
+        document.write('Введенное число ' + x + ' составное!');
+    return;
+    }
+
+    var q = Math.floor(Math.sqrt(x));
+
+    for (var i = 2; i <= q; i++)
+    {
+    if (x % i == 0)
+    {
+        document.write('Введенное число ' + x + ' составное!');
+    return;
+    }
+    }
+
+        document.write('Введенное число ' + x + ' простое!');
+    return;
+    }
+    document.write("<br/>");
+</script>
+<a href="../Cycles.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

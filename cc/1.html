@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<script>
+    function funCC(i)
+    {
+        var sum = 0, quantity = 0;
+        for (var i = 1; i < 99; i++) {
+            if (i % 2 == 0) {
+                sum += i;
+                quantity++;
+            }
+        }
+        document.write('Сумма четных чисел в диапазоне от 1 до 99 ==> ', sum);
+        document.write('<br>');
+        document.write('Число четных чисел в диапазоне от 1 до 99 ==> ', quantity);
+        document.write('<br>');
+    }
+    funCC();
+</script>
+<a href="../Cycles.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

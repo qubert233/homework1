@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+    <script>
+        Fctrl();
+        function Fctrl () {
+
+            var n = +prompt('Enter number: ', '');
+
+            function factorial(n) {
+                return (n != 1) ? n * factorial(n - 1) : 1;
+            }
+
+            document.write('Факториал числа ' + n + ' равен: ' + factorial(n));
+            document.write("<br/>");
+        }
+    </script>
+<a href="../Cycles.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

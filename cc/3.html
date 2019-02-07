@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+<script>
+    var x = parseInt(prompt("Введите число для которого нужно извлечь корень"));
+    function sqrtChecking(a)
+    {
+        var i = 1;
+        while (i * i <= a)
+        {
+            i++;
+        }
+        return i-1;
+    }
+    var y = sqrtChecking(x);
+    document.write("Корень вашего числа расчитанный методом последовательного подбора составляет "+y);
+    document.write('<br/>');
+
+    function sqrtBinSearch(a)
+    {
+        var i = a;
+
+        while (i * i > a)
+        {
+            i /= 2;
+        }
+        while (i * i < a)
+        {
+            i++;
+        }
+        return Math.trunc(i);
+    }
+    var y = sqrtBinSearch(x);
+    document.write("Корень вашего числа расчитанный методом бинарного поиска составляет "+y);
+    document.write('<br/>');
+</script>
+<a href="../Cycles.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

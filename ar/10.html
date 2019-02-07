@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10</title>
+</head>
+<body>
+<script>
+    var arr4 = [5, 2, 12, 8, 23, 17];
+    document.write(arr4);
+    document.write("<br/>");
+    document.write("<br/>");
+    function quickSort(arr, left = 0, right = arr.length - 1) {
+
+        let len = arr.length,
+            index;
+
+        if(len > 1) {
+
+            index = partition(arr, left, right);
+
+            if(left < index - 1) {
+                quickSort(arr, left, index - 1);
+            }
+
+            if(index < right) {
+                quickSort(arr, index, right);
+            }
+        }
+        return arr4;
+    }
+
+    function partition(arr, left, right) {
+        let middle = Math.floor((right + left) / 2),
+            pivot = arr[middle],
+            i = left,
+            j = right;
+
+        while(i <= j) {
+
+            while(arr[i] < pivot) {
+                i++;
+            }
+
+            while(arr[j] > pivot) {
+                j--;
+            }
+
+            if(i <= j) {
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+                i++;
+                j--;
+            }
+        }
+        return i;
+    }
+    quickSort(arr4);
+    document.write(arr4+" - Это быстрая сортировка")
+    document.write("<br/>");
+    var arr5 = [5, 2, 12, 8, 23, 17];
+    document.write("<br/>");
+    function Merge(a,low,mid,high)    //Вспомогательная функция.
+    {
+        var b = new Array(high+1-low), h, i, j = mid+1, k, h = low, i = 0;
+        while (h <= mid && j <= high )
+        { if (a[h] <= a[j]){ b[ i ]=a[h]; h++; }
+        else             { b[ i ]=a[j]; j++; }
+            i++;
+        }
+        if (h > mid){ for (k = j; k <= high; k++){ b[ i ]=a[k]; i++; } }
+        else        { for (k = h; k <= mid; k++){  b[ i ]=a[k]; i++; } }
+        for (k=0; k<=high-low; k++) a[k+low]=b[k];
+        return a;
+    }
+
+    function mergeSort(arr)
+    {
+        function merge_sort(a,low,high)
+        { if (low < high)
+        { var mid = Math.floor((low+high)/2);
+            merge_sort(a, low, mid);
+            merge_sort(a, mid+1, high);
+            Merge(a, low, mid, high);
+        }
+        }
+        var n = arr.length;
+        merge_sort(arr, 0, n-1);
+        return arr;
+    }
+    mergeSort(arr5);
+    document.write(arr5+" - Это сортировка слиянием");
+    document.write("<br/>");
+    var arr6 = [5, 2, 12, 8, 23, 17];
+    document.write("<br/>");
+    function shellSort(arr)
+    {
+        var n = arr.length, i = Math.floor(n/2);
+        while (i > 0)
+        { for (var j = 0; j < n; j++)
+        { var k = j, t = arr[j];
+            while (k >= i && arr[k-i] > t)
+            { arr[k] = arr[k-i]; k -= i; }
+            arr[k] = t;
+        }
+            i = (i==2) ? 1 : Math.floor(i*5/11);
+        }
+        return arr;
+    }
+    shellSort(arr6);
+    document.write(arr6+" - Это сортировка Шелла");
+    document.write("<br/>");
+    var arr7 = [5, 2, 12, 8, 23, 17];
+    document.write("<br/>");
+    function heapSort(arr)
+    {
+        if (arr.length == 0) return [];
+        var n = arr.length, i = Math.floor(n/2), j, k, t;
+        while (true)
+        { if (i > 0) t = arr[--i];
+        else { n--;
+            if (n == 0) return arr;
+            t = arr[n];  arr[n] = arr[0];
+        }
+            j = i;  k = j*2+1;
+            while (k < n)
+            { if (k+1 < n && arr[k+1] > arr[k]) k++;
+                if (arr[k] > t)
+                { arr[j] = arr[k];  j = k;  k = j*2+1; }
+                else break;
+            }
+            arr[j] = t;
+        }
+    }
+    heapSort(arr7);
+    document.write(arr7+" - Это пирамидальная сортировка");
+    document.write("<br/>");
+    document.write("<br/>");
+</script>
+<a href="../Arrays.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

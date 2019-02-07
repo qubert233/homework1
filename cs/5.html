@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+<script>
+    var x = parseInt(prompt("Студент, введите число от 0 до 100"));
+    funCS(x);
+    function funCS(studMark)
+    {
+        if (studMark >= 0 && studMark <= 19)
+        {
+            document.write("Оценка студента F");
+            document.write('<br>');
+        }
+        else if (studMark >= 20 && studMark <= 39)
+        {
+            document.write("Оценка студента E");
+            document.write('<br>');
+        }
+        else if (studMark >= 40 && studMark <= 59)
+        {
+            document.write("Оценка студента D");
+            document.write('<br>');
+        }
+        else if (studMark >= 60 && studMark <= 74)
+        {
+            document.write("Оценка студента C");
+            document.write('<br>');
+        }
+        else if (studMark >= 75 && studMark <= 89)
+        {
+            document.write("Оценка студента B");
+            document.write('<br>');
+        }
+        else if (studMark >= 90 && studMark <= 100)
+        {
+            document.write("Оценка студента A");
+            document.write('<br>');
+        }
+        else
+        {
+            document.write("Введены некорректные данные");
+            document.write('<br>');
+        }
+    }
+</script>
+<a href="../Conditional statements.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>

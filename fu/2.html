@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+<script>
+    Decart();
+    function Decart() {
+
+        var x1 = +prompt('Enter x1: ', '');
+        var y1 = +prompt('Enter y1: ', '');
+        var x2 = +prompt('Enter x2: ', '');
+        var y2 = +prompt('Enter y2: ', '');
+        var a = x1 - x2;
+        var b = y1 - y2;
+
+        var c = Math.sqrt( a*a + b*b );
+
+        document.write('Расстояние между точками: ' + c);
+        document.write("<br/>");
+    }
+</script>
+    <a href="../Functions.html">Вернуться на страницу с выбором задания</a>
+</body>
+</html>
